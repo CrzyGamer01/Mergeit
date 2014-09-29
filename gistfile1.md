@@ -1,6 +1,8 @@
 # Combining two git repositories
 
-**Use case**: You have repository A with remote location rA, and repository B with remote location rB. You want to do one of two things: - preserve all commits of both repositories, but replace everything from A with the contents of B, and use rA as your remote location.
+**Use case**: You have repository A with remote location rA, and repository B with remote location rB. You want to do one of two things:
+
+- preserve all commits of both repositories, but replace everything from A with the contents of B, and use rA as your remote location.
 - actually combine the two repositories, as if they are two branches that you want to merge.
 
 **Disclaimer**: I don't know if there is a better way to go about this, but I have done it successfully using the following method.
