@@ -5,7 +5,7 @@
 - preserve all commits of both repositories, but replace everything from A with the contents of B, and use rA as your remote location
 - actually combine the two repositories, as if they are two branches that you want to merge, using rA as the remote location
 
-**Disclaimer**: I don't know if there is a better way to go about this, but I have done it successfully using the following method.
+**NB**: Check out `git subtree`/`git submodule` and [this Stack Overflow question](http://stackoverflow.com/questions/1425892/how-do-you-merge-two-git-repositories) before going through the steps below. This gist is just a record of how I solved this problem on my own one day. 
 
 Before starting, make sure your local and remote repositories are up-to-date with all changes you need. The following steps use the general idea of changing the remote origin and renaming the local master branch of one of the repos in order to combine the two master branches.
 
