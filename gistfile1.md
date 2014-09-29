@@ -11,7 +11,7 @@ Before starting, make sure your local and remote repositories are up-to-date wit
 
 Change the remote origin of B to that of A:
 ```
-$ cd /path/to/B
+$ cd path/to/B
 $ git remote rm origin
 $ git remote add origin url_to_rA
 ```
