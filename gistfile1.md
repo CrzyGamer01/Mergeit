@@ -6,33 +6,33 @@ You have repository A with remote location rA, and repository B with remote loca
 
 Before starting, make sure your local and remote repositories are up-to-date with all changes you need.
 
-1. Change the remote origin of B to that of rA:
+Change the remote origin of B to that of A:
 ```
 $ git remote rm origin
 $ git remote add origin url_to_rA
 ```
-2. Rename the local master branch of B:
+Rename the local master branch of B:
 ```
 $ git checkout master
 $ git branch -m master-holder
 ```
-3. Pull all the code of A from rA
+Pull all the code of A from rA
 ```
 $ git fetch
 $ git checkout master
 $ git pull origin master
 ```
-4. Delete all the things! i.e, scrap everything from A
+Delete all the things! i.e, scrap everything from A
 ```
 $ git rm -rf *
 $ git commit -m "Delete yo."
 ```
-5. Merge master-holder to the master branch.
+Merge master-holder to the master branch.
 ```
 git merge master-holder
 ```
 `git log` should show all the commits from A, the delete commit, the merge commit, and finally all the commits from B.
-6. Push everything to rA
+Push everything to rA
 ```
 git push origin master
 ```
