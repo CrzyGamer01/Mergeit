@@ -1,10 +1,10 @@
-# Use Case
+# Combining two git repositories
 
-You have repository A with remote location rA, and repository B with remote location rB. You want to preserve the commits of both repositories, but replace everything from A with the contents of B, and use rA as your remote location.
+**Use case**: You have repository A with remote location rA, and repository B with remote location rB. You want to preserve the commits of both repositories, but replace everything from A with the contents of B, and use rA as your remote location.
 
 **Disclaimer**: I don't know if there is a better way to go about this, but I have done it successfully using the following method.
 
-Before starting, make sure your local and remote repositories are up-to-date with all changes you need.
+Before starting, make sure your local and remote repositories are up-to-date with all changes you need. The following steps use the general idea of changing the remote origin and renaming the local master branch of one of the repos in order to combine the two master branches.
 
 Change the remote origin of B to that of A:
 ```
@@ -22,7 +22,7 @@ $ git fetch
 $ git checkout master
 $ git pull origin master
 ```
-Delete all the things! i.e, scrap everything from A
+Delete all the things! i.e, scrap everything from A. If (for some reason) you actually want to _merge_ both repos and deal with some crazy conflicts, this step is unnecessary.
 ```
 $ git rm -rf *
 $ git commit -m "Delete yo."
