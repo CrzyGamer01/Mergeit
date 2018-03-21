@@ -36,9 +36,9 @@ $ git rm -rf *
 $ git commit -m "Delete all the things."
 ```
 
-Merge *master-holder* into *master*. (If you didn't do the delete step above, you have to option of `git checkout master-holder; git rebase master` instead.)
+Merge *master-holder* into *master*. (If you didn't do the delete step above, you have to option of `git checkout master-holder; git rebase master` instead.) For more recent versions of git, you'll probably have to add the `--allow-unrelated-histories` flag (thanks to @sadzik).
 ```
-git merge master-holder
+git merge master-holder --allow-unrelated-histories
 ```
 `git log` should show all the commits from A, the delete commit, the merge commit, and finally all the commits from B.
 
